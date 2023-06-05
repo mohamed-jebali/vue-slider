@@ -19,6 +19,12 @@
         <div class="container">
             <div class="carousel">
                 <img :src="images[activeIndex]" alt="Slider Image">
+                <h3 class="title">
+                    {{titles[activeIndex]}}
+                </h3>
+                <p class="text">
+                    {{text[activeIndex]}}
+                </p>
                 <div class="buttons">
                     <div class="previous-button" @click="previousSlide">
                         <i class="fa-solid fa-arrow-left fa-xs"></i>
