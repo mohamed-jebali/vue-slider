@@ -44,6 +44,7 @@ createApp({
         ],
         activeIndex : 0,
         timer : 0,
+        isHovering : false,
     }
     },
     methods: {
@@ -53,13 +54,16 @@ createApp({
         nextSlide(){
             this.activeIndex === this.images.length - 1 ? this.activeIndex = 0 : this.activeIndex++
         },
-        autoplay() {
+        autoPlay() {
             this.timer = setInterval(() => {
               this.nextSlide();
             }, 3000);
           },
+          stopAutoplay() {
+            clearInterval(this.timer);
         },
     mounted() {
             this.autoplay();
-          },   
+          },
+        } 
 }).mount('#app');

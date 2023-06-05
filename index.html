@@ -18,7 +18,8 @@
     <div id="app">
         <div class="container">
             <div class="carousel d-flex flex-wrap">
-                <img :src="images[activeIndex].image" alt="Slider Image" class="image-carousel">
+                <img :src="images[activeIndex].image" alt="Slider Image" class="image-carousel" @mouseover="stopAutoplay"
+                @mouseout="autoPlay">
                 <h3 class="title">
                     {{images[activeIndex].title}}
                 </h3>
