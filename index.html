@@ -18,12 +18,12 @@
     <div id="app">
         <div class="container">
             <div class="carousel">
-                <img :src="images[activeIndex]" alt="Slider Image">
+                <img :src="images[activeIndex].image" alt="Slider Image">
                 <h3 class="title">
-                    {{titles[activeIndex]}}
+                    {{images[activeIndex].title}}
                 </h3>
                 <p class="text">
-                    {{text[activeIndex]}}
+                    {{images[activeIndex].text}}
                 </p>
                 <div class="buttons">
                     <div class="previous-button" @click="previousSlide">
