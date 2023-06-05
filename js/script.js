@@ -43,6 +43,7 @@ createApp({
             }
         ],
         activeIndex : 0,
+        timer : 0,
     }
     },
     methods: {
@@ -58,4 +59,7 @@ createApp({
             }, 3000);
           },
         },
+    mounted() {
+            this.autoplay();
+          },   
 }).mount('#app');
