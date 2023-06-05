@@ -96,3 +96,15 @@ div.next-button i{
     font-size: 1.3rem;
     padding: 1rem;
 }
+div.thumbnails{
+    display: flex;
+    height: 100px;
+    margin-bottom: 3rem;
+}
+
+div.thumbnails img{
+    filter: brightness(40%)
+}
+div.thumbnails img.active{
+    filter: brightness(150%);
+}

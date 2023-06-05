@@ -19,6 +19,11 @@
         <div class="container">
             <div class="carousel">
                 <img :src="images[activeIndex].image" alt="Slider Image">
+                <div class="thumbnails">
+                    <div class="thumbnail" v-for="(imageElement, index) in images" @click="activeIndex = index">
+                        <img :src="imageElement.image" alt="slider-image"
+                        :class="index === activeIndex ? 'active' : ''">
+                    </div>
                 <h3 class="title">
                     {{images[activeIndex].title}}
                 </h3>
