@@ -17,13 +17,8 @@
 
     <div id="app">
         <div class="container">
-            <div class="carousel">
-                <img :src="images[activeIndex].image" alt="Slider Image">
-                <div class="thumbnails">
-                    <div class="thumbnail" v-for="(imageElement, index) in images" @click="activeIndex = index">
-                        <img :src="imageElement.image" alt="slider-image"
-                        :class="index === activeIndex ? 'active' : ''">
-                    </div>
+            <div class="carousel d-flex flex-wrap">
+                <img :src="images[activeIndex].image" alt="Slider Image" class="image-carousel">
                 <h3 class="title">
                     {{images[activeIndex].title}}
                 </h3>
@@ -37,6 +32,10 @@
                     <div class="next-button" @click="nextSlide">
                         <i class="fa-solid fa-arrow-right fa-xs"></i>
                     </div>
+                </div>
+                <div class="thumbnails" v-for="(imageElement, index) in images" @click="activeIndex = index">
+                    <img :src="imageElement.image" alt="slider-image"
+                    :class="index === activeIndex ? 'active' : ''">
                 </div>
             </div>
           </div>
