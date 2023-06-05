@@ -103,7 +103,7 @@ div.thumbnails{
 }
 
 div.thumbnails img{
-    filter: brightness(40%)
+    filter: brightness(40%);
 }
 div.thumbnails img.active{
     filter: brightness(150%);
