@@ -44,7 +44,6 @@ createApp({
         ],
         activeIndex : 0,
         timer : 0,
-        isHovering : false,
     }
     },
     methods: {
